@@ -9,7 +9,7 @@ whoami = ['!Who are you', '!who are you', '!Who are you?', '!who are you?'\
           , "!your story"\
           , "!Where are you", "!where are you"]
             
-responsor = ['!I hate you', '!I love you']
+responsor = ['!I love you']
 
 orderList = [helper, finish, show, delete, save, clear]
 
@@ -87,7 +87,7 @@ while True:
         
         elif words in responsor:
             story.pop()
-            print("me too")
+            print("I love you too")
         else:
             continue
     
