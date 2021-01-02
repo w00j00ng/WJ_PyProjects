@@ -24,7 +24,7 @@ while True:
     words = input()
     story.append(words)
     
-    if words[0] != "!":
+    if "!" not in words:
         continue
         
     else:
