@@ -1,3 +1,4 @@
+import os
 
 helper = ["!help"]
 finish = ["!quit", "!exit"]
@@ -33,7 +34,6 @@ while True:
             
         elif words in clear:
             story.pop()
-            import os
             cleaner = lambda: os.system("cls")
             cleaner()
             
