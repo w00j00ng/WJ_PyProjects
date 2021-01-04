@@ -27,7 +27,7 @@ def delete_f():
     print("ORDER LIST")
     for order in orderList:
         for i in order:
-            print(i, end = " ")
+            print("!", i, end = " ")
     print()
     print("====================================================")
     print('Tell me "!help" if you need any help')
@@ -43,22 +43,29 @@ def save_f():
     outFp.close()
     print("Your Story Saved \n")
 
+def whoami_f():
+    print("My name is Raven")
+    print("w00j00ng351@gmail.com")
+
+def specialInput_1_f():
+    print("I love you too")
+
 
 print("Hello. I am your listener")
 print('Tell me "!help" if you need any help')
 print("====================================================")
 
-helpStr = ["!help"]
-finishStr = ["!quit", "!exit"]
-showStr = ["!show"]
-deleteStr = ["!delete"]
-saveStr = ['!save']
-clearStr = ['!clear']
-whoamiStr = ['!Who are you', '!who are you', '!Who are you?', '!who are you?'\
-          , "!your story"\
-          , "!Where are you", "!where are you"]
-special1Str = ['!I love you']
+helpStr = ["help"]
+finishStr = ["quit", "exit"]
+showStr = ["show"]
+deleteStr = ["delete"]
+saveStr = ['save']
+clearStr = ['clear']
+
 orderList = [helpStr, finishStr, showStr, deleteStr, saveStr, clearStr]
+
+whoamiInput = ['Who are you', 'who are you', 'Who are you?', 'who are you?' , "your story" , "Where are you", "where are you"]
+specialInput_1 = ['I love you']
 
 story = []
 
@@ -71,30 +78,29 @@ while True:
         
     else:
         story.pop()
-        if words in finishStr:
+        if words[1:] in finishStr:
             break
             
-        elif words in clearStr:
+        elif words[1:] in clearStr:
             clear_f()
             
-        elif words in helpStr:
+        elif words[1:] in helpStr:
             help_f()
             
-        elif words in showStr:
+        elif words[1:] in showStr:
             show_f()
                 
-        elif words in deleteStr:
+        elif words[1:] in deleteStr:
             delete_f()
             
-        elif words in saveStr:
+        elif words[1:] in saveStr:
             save_f()
 
-        elif words in whoamiStr:
-            print("My name is Raven")
-            print("w00j00ng351@gmail.com")
+        elif words[1:] in whoamiInput:
+            whoami_f()
         
-        elif words in special1Str:
-            print("I love you too")
+        elif words[1:] in specialInput_1:
+            specialInput_1_f()
 
         else:
             continue
