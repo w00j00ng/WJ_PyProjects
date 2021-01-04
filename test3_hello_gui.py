@@ -26,7 +26,7 @@ def btn_1_cmd():
 def exit_f():
     window.destroy()
 
-btn1 = Button(window, text = "클릭", command = btn_1_cmd)
+btn1 = Button(window, text = "Click", command = btn_1_cmd)
 btn1.pack()
 
 btn2 = Button(window, text = "Exit", command = exit_f)
